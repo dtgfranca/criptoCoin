@@ -1,0 +1,15 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>
+			Histórico
+		</ion-title>
+	</ion-navbar>
+	
+</ion-header>
+<ion-tabs>
+	<ion-tab [root]="cotacaoRoot" tabTitle="Cotacao" tabIcon="information-circle" [rootParams] ="holding"></ion-tab>
+	<!--<ion-tab [root]="lembreteRoot" tabTitle="Lembrete" tabIcon="information-circle"></ion-tab>-->
+</ion-tabs>

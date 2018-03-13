@@ -1,0 +1,54 @@
+<ion-header>
+	
+	<ion-navbar color="primary">
+		<ion-title>Adicionar moeda</ion-title>
+	</ion-navbar>
+	
+</ion-header>
+
+
+<ion-content padding>
+	
+	<div class="message">
+		
+		<p>Para adicionar uma moeda, você precisará fornecer o símbolo apropriado da criptomoeda.</p>
+		
+		<p><strong>Nota:</strong>Os preços listados são estimados. As taxas podem variar significativamente em diferentes trocas.</p>
+		<p class="error-message" *ngIf="cryptoUnavailable">Desculpe, essa combinação não está disponível no momento. Certifique-se de incluir apenas um único código..</p>
+		
+		<p class="error-message" *ngIf="noConnection">Desculpe, você precisa estar online para adicionar novas criptomoedas.</p>
+
+		
+	</div>
+	
+	
+	<ion-list>
+		
+		<ion-item>
+			<ion-label stacked>Crypto Codigo</ion-label>
+			<ion-input [(ngModel)]="cryptoCode" placeholder="(e.g. BTC, LTC, ETH)" type="text"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label stacked>Exibição do código da criptomoeda</ion-label>
+			<ion-input [(ngModel)]="displayCurrency" placeholder="(e.g. USD, CAD, AUD)" type="text"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label stacked>Quantidade de  criptomoeda</ion-label>
+			<ion-input [(ngModel)]="amountHolding" type="number"></ion-input>
+		</ion-item>
+		
+	</ion-list>  
+	
+	<button ion-button full (click)="addHolding()" [disabled]="checkingValidity">Adicionar Moeda <ion-spinner *ngIf="checkingValidity"></ion-spinner></button>
+	
+	<p class="error-message" *ngIf="cryptoUnavailable">Sorry, that combination is not currently available. Make sure to only include a single code.</p>
+	
+</ion-content>
+
+<ion-footer padding>
+	
+	<p><strong>Nota:</strong>Esta aplicação web permite que você acompanhe sua Cryptocurrency sem criar uma conta. Isso significa que todos os dados são armazenados localmente e podem ser excluídos permanentemente sem aviso prévio.</p>
+	
+</ion-footer>

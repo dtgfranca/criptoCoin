@@ -1,0 +1,15 @@
+{
+  "name": "CriptoCoin",
+  "short_name": "CriptoCoin",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+   "background_color": "#ed5923",
+    "theme_color": "#ed5923",
+    "orientation": "portrait",
+ 
+}
