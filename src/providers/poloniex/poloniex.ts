@@ -6,7 +6,7 @@ import { forkJoin }   from 'rxjs/observable/forkJoin';
 import { timeoutWith } from 'rxjs/operators';
 import 'rxjs/add/observable/throw';
 
-import { getClient, IPoloniexClient } from 'poloniex-exchange-api';
+//import { getClient, IPoloniexClient } from 'poloniex-exchange-api';
 
 /*
   Generated class for the PoloniexProvider provider.
@@ -15,8 +15,8 @@ import { getClient, IPoloniexClient } from 'poloniex-exchange-api';
   and Angular DI.
   */
 
-  const client: IPoloniexClient = getClient();
-  const { status, data } = await client.returnBalances();
+  //const client: IPoloniexClient = getClient();
+ // const { status, data } = await client.returnBalances();
 
 //const  valor = await  client.returnBalances();
   @Injectable()
@@ -28,10 +28,10 @@ import { getClient, IPoloniexClient } from 'poloniex-exchange-api';
 
 
 
-	 client: IPoloniexClient = getClient({
-            publicKey : '', // Your public key
-            privateKey: '', // Your private key
-        });
+	 //client: IPoloniexClient = getClient({
+       //     publicKey : '', // Your public key
+          //  privateKey: '', // Your private key
+      // });
 
 
   	 

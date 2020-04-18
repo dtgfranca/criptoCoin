@@ -1,6 +1,6 @@
 {
   "name": "cryptopwa",
-  "app_id": "",
+  "integrations": {},
   "type": "ionic-angular",
-  "integrations": {}
+  "id": "37c65c02"
 }
